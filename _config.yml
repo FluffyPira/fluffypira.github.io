@@ -6,12 +6,12 @@
 # 'jekyll serve'. If you change this file, please restart the server process.
 
 # Site settings
-title: Guild Wars 2 LGBT Alliance
+title: Lizzy's Test Blog Page
 email: admin@gw2.lgbt
 description: > # this means to ignore newlines until "baseurl:"
-  An alliance of intersectional Guild Wars 2 Guilds and our allies.
+  A test site to play around with jekyll
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://gw2-lgbt-alliance.gitlab.io" # the base hostname & protocol for your site
+url: "https://fluffypira.github.io/" # the base hostname & protocol for your site
 
 # Build settings
 markdown: kramdown
