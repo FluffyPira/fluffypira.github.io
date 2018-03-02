@@ -1,0 +1,16 @@
+<header class="site-header">
+	<nav id="navbar" class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark">
+		<a href="/"><span class="navbar-brand mb-0 h1" style="font-size: calc(1rem + 0.5vw);">Lorem Ipsum</span></a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+
+		<div class="collapse navbar-collapse" id="navbarSupportedContent">
+			<ul class="navbar-nav ml-auto">{% for pages in site.pages %}{% if pages.title %}
+				<li class="nav-item">
+					<a class="nav-link" href="{{ pages.url | prepend: site.baseurl }}">{{ pages.title }}</a>
+				</li>{% endif %}{% endfor %}
+			</ul>
+		</div>
+	</nav>
+</header>

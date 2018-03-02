@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+{% include head.html %}
+
+<body>
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-md-10 offset-md-1">
+				<div class="content-shadow">
+					{% include header.html %}
+					<div class="content-box">
+						<div class="row">
+							<div class="col-md-3">
+								<div class="sidebar">
+									<div class="text-padding">
+										<p class="h2 text-center">Sidebar</p>
+										<p class="h3">Stuff</p>
+										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis id tortor libero. Ut tincidunt finibus rutrum. Etiam fringilla egestas euismod. Aliquam quis velit.</p>
+										<p class="h3">More stuff</p>
+										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis id tortor libero. Ut tincidunt finibus rutrum. Etiam fringilla egestas euismod. Aliquam quis velit.</p>
+										<p class="h3">Recent Stuff</p>
+										{% assign sorted = (site.posts | sort: 'date') | reverse %}
+										<ul>{% for post in sorted limit:5 %}
+										<li><a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></li>
+										{% endfor %}</ul>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-9">
+								<div class="text-padding">	
+									{{ content }}
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	{% include footer.html %}
+</body>
+</html>
